@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33529.398
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SENTINEL_SSIS", "SENTINEL_SSIS\SENTINEL_SSIS.dtproj", "{90738459-073B-4270-B004-1D7A90BEBEFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90738459-073B-4270-B004-1D7A90BEBEFE}.Development|Default.ActiveCfg = Development
+		{90738459-073B-4270-B004-1D7A90BEBEFE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A7857CB-76AC-41D6-8BE8-13B3766ECF06}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,27 @@
+SELECT ss.[ID]
+      ,ss.[sessionID]
+      ,ss.[userID]
+      ,ss.[channelName]
+      ,ss.[sessionData]
+      ,ss.[createdDate]
+      ,ss.[lastActivityDate]
+      ,ss.[clientIP]
+      ,ss.[mobileIMEI]
+      ,ssdt.[userSessionID]
+      ,ssdt.[clientIP]
+      ,ssdt.[operationDate]
+      ,ssdt.[userAgent]
+      ,ssdt.[host]
+      ,ssdt.[referer]
+      ,ssdt.[httpMethod]
+      ,ssdt.[requestUri]
+      ,ssdt.[httpStatusCode]
+      ,ssdt.[cookies]
+      ,ssdt.[httpParams]
+      ,ssdt.[responseHtml]
+  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss
+  LEFT JOIN [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt on (ssdt.[userSessionID] = ss.[ID])
+  WHERE ss.[userID] = 'CBENNASAR'  
+  and CONVERT(VARCHAR(8),ss.[createdDate],112) = '20221108'
+  --and ss.id = 119736
+  order by ss.id, ssdt.id
