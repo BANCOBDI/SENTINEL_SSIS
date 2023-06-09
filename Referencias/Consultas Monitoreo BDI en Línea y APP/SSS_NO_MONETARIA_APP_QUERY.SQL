@@ -78,11 +78,11 @@ Responsable	Varchar(50)
 
 --CREATE PROCEDURE SP_NO_MONETARIA_APP
 --AS
-DECLARE @FECHA1 DATETIME =  GETDATE();
-DECLARE @FECHA2 DATETIME =  GETDATE() + 1;
+DECLARE @FECHAHORA_INICIO DATETIME =  GETDATE();
+DECLARE @FECHAHORA_FINAL DATETIME =  GETDATE() + 1;
 DECLARE @PATH VARCHAR(250) = 'payee/getContractServices';
 
-SELECT @FECHA1, @FECHA2;
+SELECT @FECHAHORA_INICIO, @FECHAHORA_FINAL;
 
 /*
 PATH QUE NO IRIAN A FORMATEARSE
@@ -228,9 +228,28 @@ SELECT
 		'8', ''),
 		'9', ''),
 		'0', '') AS EVENTO
+  --select ss.*
+  --select ssdt.*
   FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)
   LEFT JOIN [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) on (ssdt.[userSessionID] = ss.[ID])
-  WHERE CONVERT(datetime,ss.[createdDate],112) BETWEEN CONVERT(datetime, @FECHA1, 112) AND CONVERT(datetime, @FECHA2, 112);
+  WHERE ss.[ID] is not null
+  --and CONVERT(datetime,ss.[createdDate],112) BETWEEN CONVERT(datetime, @FECHAHORA_INICIO, 112) AND CONVERT(datetime, @FECHAHORA_FINAL, 112)
+  and ss.[createdDate] BETWEEN @FECHAHORA_INICIO AND  @FECHAHORA_FINAL
+  --ORDER BY ss.[ID];
+  ORDER BY ss.[ID] DESC;
+
+  sp_help '[SII.Omega.Weblog].[dbo].[UsersSessions]'
+  select top 100 ss.*
+  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)
+  WHERE ss.[ID] is not null
+  ORDER BY ss.[ID] DESC;
+  
+  sp_help '[SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail]'
+  select top 100 ssdt.*
+  FROM  [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) 
+  ORDER BY ssdt.[ID] DESC, ssdt.[userSessionID] DESC, ssdt.operationDate desc;
+
+
 
   OPEN @miCursor;
 

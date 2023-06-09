@@ -2,14 +2,27 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 USE [SII.Omega.Weblog]
 
+Declare @Id_UEN as nvarchar(3) = '001'
+Declare @Canal as nvarchar(15) = 'APP'
+Declare @Trama_Origen as nvarchar(75) = 'SSS_No_Monetaria_APP'
+Declare @Procesado as nvarchar(50) = '0'
+Declare @DefaultEventApp as nvarchar(250) = 'Intento de Login en proceso'
+DECLARE @FECHAHORA_INICIO DATETIME =  DATEADD(MINUTE, -15, GETDATE())
+DECLARE @FECHAHORA_FINAL DATETIME =  GETDATE();
+
+--SELECT @FECHAHORA_INICIO, @FECHAHORA_FINAL;
+
 SELECT
 TOP (200)
-ID AS ID_TRANSACCION,
+CONCAT(ss.[ID],'-',ISNULL(ssdt.[ID],0)) AS ID_TRANSACCION,
+@Id_UEN as Id_UEN,
+ISNULL(ssdt.operationDate,ss.createdDate) as Fecha_Ingreso,
 NULL AS CODIGO_TRANSACCION,
-'APP' AS CANAL,
+@Canal AS CANAL,
 --SUBSTRING(requestUri, 45, 100) as TIPO_TRANSACCION,
+ISNULL(
 REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
-IIF(CHARINDEX('?',SUBSTRING(requestUri, 45, 100)) = 0, SUBSTRING(requestUri, 45, 100), SUBSTRING(requestUri, 45, (CHARINDEX('?',SUBSTRING(requestUri, 45, 100))) - 1)), 
+IIF(CHARINDEX('?',SUBSTRING(ssdt.requestUri, 45, 100)) = 0, SUBSTRING(ssdt.requestUri, 45, 100), SUBSTRING(ssdt.requestUri, 45, (CHARINDEX('?',SUBSTRING(ssdt.requestUri, 45, 100))) - 1)), 
 '1', ''),
 '2', ''),
 '3', ''),
@@ -19,14 +32,14 @@ IIF(CHARINDEX('?',SUBSTRING(requestUri, 45, 100)) = 0, SUBSTRING(requestUri, 45,
 '7', ''),
 '8', ''),
 '9', ''),
-'0', '') as TIPO_TRANSACCION,
-'SSS_TRANS_DIARIO_APP' TRAMA,
-AT AS IP_CLIENTE,
+'0', ''),
+@DefaultEventApp) as TIPO_TRANSACCION,
+@Trama_Origen as TRAMA,
+@Procesado as Procesado,
+ss.[clientIP] AS IP_CLIENTE,
 NULL AS PULSEPLUS_LATITUDE,
-NULL AS PULSEPLUS_LONGITUDE--,
---*
-FROM (
-SELECT
+NULL AS PULSEPLUS_LONGITUDE
+/*SELECT
 	  ss.[ID]
       ,ss.[sessionID]
       ,ss.[userID]
@@ -34,10 +47,10 @@ SELECT
       ,ss.[sessionData]
       ,ss.[createdDate]
       ,ss.[lastActivityDate]
-      ,ss.[clientIP] as ac
+      ,ss.[clientIP]
       ,ss.[mobileIMEI]
       ,ssdt.[userSessionID]
-      ,ssdt.[clientIP] as at
+      ,ssdt.[clientIP]
       ,ssdt.[operationDate]
       ,ssdt.[userAgent]
       ,ssdt.[host]
@@ -47,7 +60,7 @@ SELECT
       ,ssdt.[httpStatusCode]
       ,ssdt.[cookies]
       ,ssdt.[httpParams]
-      ,ssdt.[responseHtml]
+      ,ssdt.[responseHtml]*/
   FROM [dbo].[UsersSessions] ss
   LEFT JOIN [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt on (ssdt.[userSessionID] = ss.[ID])
   --WHERE CONVERT(datetime,ss.[createdDate],112) BETWEEN CONVERT(datetime, @FECHA1, 112) AND CONVERT(datetime, @FECHA2, 112)
@@ -55,7 +68,6 @@ SELECT
   --and CONVERT(VARCHAR(8),ss.[createdDate],112) = '20221108'
   --and ss.id = 119736
   --order by ss.id desc
-  ) as t
   ORDER BY ID_TRANSACCION DESC;
 
 /*
