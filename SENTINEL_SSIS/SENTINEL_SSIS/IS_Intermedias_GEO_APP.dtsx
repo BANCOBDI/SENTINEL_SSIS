@@ -12,11 +12,28 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IS_Intermedias_GEO_APP"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{71D9373A-2D21-429D-A3FD-B90ED245ADB5}">
+  DTS:VersionBuild="157"
+  DTS:VersionGUID="{0AF13D82-440D-45FC-8B01-287AF1712E49}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DBIntermediaGeolocalizacion]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0838f47d-4fb7-40ae-926d-8da6f319777d}"
+      DTS:ObjectName="DBIntermediaGeolocalizacion">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BDISVRSQL19LAB;User ID=bdidesarrollo;Initial Catalog=DBIntermediaGeolocalizacion;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAATZierFBLLybVC5fugAky9AAAAAASAAACgAAAAEAAAAN7UUVlwBsLkArbwNOZiabEYAAAA3uVV2PKxGxx0rjELKDEr6V97IfyemuQHFAAAANu8A+YBg0KkQ5XJEskgsb+NXp9S</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[FISA]"
       DTS:CreationName="OLEDB"
@@ -38,7 +55,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=BDISVRSQL19LAB;Initial Catalog=Sentinel_7;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=BDISVRSQL19LAB;User ID=bdidesarrollo;Initial Catalog=Sentinel_7;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABwcMVXAC/tHX60UHLE8a3OAAAAAASAAACgAAAAEAAAAP9SXl0CVpoLozOgquElG7gYAAAAjCCSS0+ZfARzID2s4ahKxn9H4iaB4zfBFAAAAMILRjjjgq4oapV7wdaTxc09YCfl</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -66,7 +88,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADfMOgIcKBUwgpYDW0kD4yqAAAAAASAAACgAAAAEAAAAD9zucmTEn7qvRNPUysTWkMgAAAAx8mJzONxUDkH38flhjVqxsuTWC6NU+9jlG6LFy4ke6YUAAAAppS7DDgk+oVjdbisWZgDisL+egs</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADoqFxehqyGxQjfrW095zNyAAAAAASAAACgAAAAEAAAAFNN9iNfi/oxmJUtNLGG1GYgAAAA5sO/B38AGp9cKFUkEUtwBbHv9N52eSTpbFKfjU5PvNAUAAAAFkk1azHJzyxXwDbdtkmDif6S748</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -80,6 +102,64 @@
       DTS:ObjectName="Configuration 1" />
   </DTS:Configurations>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{35346449-D084-4442-8CBA-68DB8BF4CA54}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CtrUsersSessionsHttpDetail_ID">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8CFC2E32-4B6A-46A6-8B0F-BF6FC9BB3082}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CtrUsersSessionsHttpDetail_ID_APP">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6BC3301E-C66B-4BF3-B0EF-D5DF2B3B5659}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CtrUsersSessions_ID">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{100FC29D-7087-4E10-8EDC-B187D9F4D30F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CtrUsersSessions_ID_APP">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7FE56C12-38B3-4F0D-B66C-E62CCA188E7B}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT ss.[ID]  ,ss.[sessionID] ,ss.[userID] ,ss.[channelName] ,ss.[sessionData] ,ss.[createdDate] ,ss.[lastActivityDate] ,ss.[clientIP] ,ss.[mobileIMEI] ,ss.[mobileNumber] ,ss.[userCulture] ,ss.[timeout]  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) where ss.ID between &quot; + (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID]  + &quot; and &quot;  +  (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID_APP]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QryToFillIntermediaUsersSessions">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT ss.[ID]  ,ss.[sessionID] ,ss.[userID] ,ss.[channelName] ,ss.[sessionData] ,ss.[createdDate] ,ss.[lastActivityDate] ,ss.[clientIP] ,ss.[mobileIMEI] ,ss.[mobileNumber] ,ss.[userCulture] ,ss.[timeout]  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) where ss.ID between 0 and 0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C42EE329-D584-42E0-94FF-F11E4271D9AD}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml] FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between &quot; +  (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID]  + &quot; and &quot; + (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID_APP]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QryToFillIntermendiaUsersSessionsHttpDetail">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml] FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between 0 and 0</DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{D474FD28-7F04-4C1E-AE49-AA3DF4C3A285}"
@@ -101,87 +181,1417 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Actualiza Dato Configuracion 1"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{15A05519-04F9-4A02-99E9-313948AE8C0C}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:refId="Package\DFT - LOAD - IntermediaUsersSessions"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{DD2CBEC7-B428-4635-994A-F34002211D47}"
+      DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Actualiza Dato Configuracion 1"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ObjectName="DFT - LOAD - IntermediaUsersSessions"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{7F83A890-E735-425B-A844-89FA64DC2176}"
-          SQLTask:SqlStatementSource="update sss_configuracion &#xA;set valor = ?&#xA;where parametro = 'Fin_Dia_Fisa'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ParameterBinding
-            SQLTask:ParameterName="0"
-            SQLTask:DtsVariableName="User::Usuario"
-            SQLTask:ParameterDirection="Input"
-            SQLTask:DataType="129"
-            SQLTask:ParameterSize="-1" />
-        </SQLTask:SqlTaskData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - LOAD  -  IntermediaUsersSessions"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[IntermediaUsersSessions]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DBIntermediaGeolocalizacion]"
+                  connectionManagerRefId="Package.ConnectionManagers[DBIntermediaGeolocalizacion]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="i8"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[sessionID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="sessionID"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[sessionID]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[sessionID]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[userID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="userID"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[userID]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[userID]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[channelName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="channelName"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[channelName]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[channelName]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[sessionData]"
+                      cachedDataType="image"
+                      cachedName="sessionData"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[sessionData]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[sessionData]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[createdDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="createdDate"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[createdDate]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[createdDate]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[lastActivityDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="lastActivityDate"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[lastActivityDate]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[lastActivityDate]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[clientIP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="clientIP"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[clientIP]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[clientIP]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[mobileIMEI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="mobileIMEI"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[mobileIMEI]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[mobileIMEI]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[mobileNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="mobileNumber"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[mobileNumber]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[mobileNumber]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[userCulture]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="userCulture"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[userCulture]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[userCulture]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].Columns[timeout]"
+                      cachedDataType="i4"
+                      cachedName="timeout"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[timeout]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[timeout]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="i8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[sessionID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="sessionID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[userID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="userID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[channelName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="channelName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[sessionData]"
+                      dataType="image"
+                      name="sessionData" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[createdDate]"
+                      dataType="dbTimeStamp"
+                      name="createdDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[lastActivityDate]"
+                      dataType="dbTimeStamp"
+                      name="lastActivityDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="clientIP" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[mobileIMEI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="mobileIMEI" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[mobileNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="mobileNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[userCulture]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="userCulture" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input].ExternalColumns[timeout]"
+                      dataType="i4"
+                      name="timeout" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source - GET - UsersSessions"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::QryToFillIntermediaUsersSessions</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SII_OMEGA_WEBLOG]"
+                  connectionManagerRefId="Package.ConnectionManagers[SII_OMEGA_WEBLOG]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[ID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[sessionID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[sessionID]"
+                      length="512"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[sessionID]"
+                      name="sessionID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[userID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[userID]"
+                      length="50"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[userID]"
+                      name="userID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[channelName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[channelName]"
+                      length="20"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[channelName]"
+                      name="channelName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[sessionData]"
+                      dataType="image"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[sessionData]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[sessionData]"
+                      name="sessionData"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[createdDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[createdDate]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[createdDate]"
+                      name="createdDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[lastActivityDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[lastActivityDate]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[lastActivityDate]"
+                      name="lastActivityDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[clientIP]"
+                      length="50"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[clientIP]"
+                      name="clientIP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[mobileIMEI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[mobileIMEI]"
+                      length="20"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[mobileIMEI]"
+                      name="mobileIMEI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[mobileNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[mobileNumber]"
+                      length="20"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[mobileNumber]"
+                      name="mobileNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[userCulture]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[userCulture]"
+                      length="5"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[userCulture]"
+                      name="userCulture"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[timeout]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[timeout]"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].Columns[timeout]"
+                      name="timeout"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      dataType="i8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[sessionID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="sessionID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[userID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="userID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[channelName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="channelName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[sessionData]"
+                      dataType="image"
+                      name="sessionData" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[createdDate]"
+                      dataType="dbTimeStamp"
+                      name="createdDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[lastActivityDate]"
+                      dataType="dbTimeStamp"
+                      name="lastActivityDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="clientIP" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[mobileIMEI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="mobileIMEI" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[mobileNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="mobileNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[userCulture]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="userCulture" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output].ExternalColumns[timeout]"
+                      dataType="i4"
+                      name="timeout" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[ID]"
+                      dataType="i8"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[sessionID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[sessionID]"
+                      name="sessionID" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[userID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[userID]"
+                      name="userID" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[channelName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[channelName]"
+                      name="channelName" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[sessionData]"
+                      dataType="image"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[sessionData]"
+                      name="sessionData" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[createdDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[createdDate]"
+                      name="createdDate" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[lastActivityDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[lastActivityDate]"
+                      name="lastActivityDate" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[clientIP]"
+                      name="clientIP" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[mobileIMEI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[mobileIMEI]"
+                      name="mobileIMEI" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[mobileNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[mobileNumber]"
+                      name="mobileNumber" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[userCulture]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[userCulture]"
+                      name="userCulture" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[timeout]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[timeout]"
+                      name="timeout" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - LOAD - IntermediaUsersSessions.Paths[OLE DB Source Output]"
+              endId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Get_Usuario_Fisa 1"
+      DTS:refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{17917F58-7610-47A7-B59D-AA0CC20AF76F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - LOAD -IntermendiaUsersSessionsHttpDetail"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[IntermendiaUsersSessionsHttpDetail]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DBIntermediaGeolocalizacion]"
+                  connectionManagerRefId="Package.ConnectionManagers[DBIntermediaGeolocalizacion]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="i8"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[clientIP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="clientIP"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[clientIP]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[clientIP]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[userSessionID]"
+                      cachedDataType="i8"
+                      cachedName="userSessionID"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[userSessionID]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[userSessionID]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[operationDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="operationDate"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[operationDate]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[operationDate]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[userAgent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="userAgent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[userAgent]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[userAgent]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[host]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="host"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[host]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[host]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[referer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="800"
+                      cachedName="referer"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[referer]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[referer]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[httpMethod]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="httpMethod"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[httpMethod]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpMethod]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[requestUri]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="800"
+                      cachedName="requestUri"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[requestUri]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[requestUri]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[httpStatusCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="httpStatusCode"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[httpStatusCode]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpStatusCode]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[cookies]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2000"
+                      cachedName="cookies"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[cookies]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[cookies]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[httpParams]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="httpParams"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[httpParams]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpParams]" />
+                    <inputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].Columns[responseHtml]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="responseHtml"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[responseHtml]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[responseHtml]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="i8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="clientIP" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[userSessionID]"
+                      dataType="i8"
+                      name="userSessionID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[operationDate]"
+                      dataType="dbTimeStamp"
+                      name="operationDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[userAgent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="userAgent" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[host]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="host" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[referer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="800"
+                      name="referer" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[httpMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="httpMethod" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[requestUri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="800"
+                      name="requestUri" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[httpStatusCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="httpStatusCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[cookies]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2000"
+                      name="cookies" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[httpParams]"
+                      codePage="1252"
+                      dataType="text"
+                      name="httpParams" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input].ExternalColumns[responseHtml]"
+                      codePage="1252"
+                      dataType="text"
+                      name="responseHtml" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source - GET - UsersSessionsHttpDetail"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::QryToFillIntermendiaUsersSessionsHttpDetail</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SII_OMEGA_WEBLOG]"
+                  connectionManagerRefId="Package.ConnectionManagers[SII_OMEGA_WEBLOG]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[ID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[clientIP]"
+                      length="50"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[clientIP]"
+                      name="clientIP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[userSessionID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[userSessionID]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[userSessionID]"
+                      name="userSessionID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[operationDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[operationDate]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[operationDate]"
+                      name="operationDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[userAgent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[userAgent]"
+                      length="200"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[userAgent]"
+                      name="userAgent"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[host]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[host]"
+                      length="50"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[host]"
+                      name="host"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[referer]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[referer]"
+                      length="800"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[referer]"
+                      name="referer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[httpMethod]"
+                      length="10"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpMethod]"
+                      name="httpMethod"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[requestUri]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[requestUri]"
+                      length="800"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[requestUri]"
+                      name="requestUri"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpStatusCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[httpStatusCode]"
+                      length="4"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpStatusCode]"
+                      name="httpStatusCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[cookies]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[cookies]"
+                      length="2000"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[cookies]"
+                      name="cookies"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpParams]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[httpParams]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[httpParams]"
+                      name="httpParams"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[responseHtml]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[responseHtml]"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].Columns[responseHtml]"
+                      name="responseHtml"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      dataType="i8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="clientIP" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[userSessionID]"
+                      dataType="i8"
+                      name="userSessionID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[operationDate]"
+                      dataType="dbTimeStamp"
+                      name="operationDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[userAgent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="userAgent" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[host]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="host" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[referer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="800"
+                      name="referer" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[httpMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="httpMethod" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[requestUri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="800"
+                      name="requestUri" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[httpStatusCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="httpStatusCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[cookies]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2000"
+                      name="cookies" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[httpParams]"
+                      codePage="1252"
+                      dataType="text"
+                      name="httpParams" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output].ExternalColumns[responseHtml]"
+                      codePage="1252"
+                      dataType="text"
+                      name="responseHtml" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[ID]"
+                      dataType="i8"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[userSessionID]"
+                      dataType="i8"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[userSessionID]"
+                      name="userSessionID" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[clientIP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[clientIP]"
+                      name="clientIP" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[operationDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[operationDate]"
+                      name="operationDate" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[userAgent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[userAgent]"
+                      name="userAgent" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[host]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[host]"
+                      name="host" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[referer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="800"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[referer]"
+                      name="referer" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[httpMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[httpMethod]"
+                      name="httpMethod" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[requestUri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="800"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[requestUri]"
+                      name="requestUri" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[httpStatusCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[httpStatusCode]"
+                      name="httpStatusCode" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[cookies]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2000"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[cookies]"
+                      name="cookies" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[httpParams]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[httpParams]"
+                      name="httpParams" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[responseHtml]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[responseHtml]"
+                      name="responseHtml" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail.Paths[OLE DB Source Output]"
+              endId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - GET - UsersSessions - ID  - APP"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{0B56C4CF-97B6-4230-9E83-0FA9087ED904}"
+      DTS:DTSID="{A49E9513-18E1-4099-8CDA-6382A2249705}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Get_Usuario_Fisa 1"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ObjectName="EST - GET - UsersSessions - ID  - APP"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A09B6EF3-03A4-4656-AEF3-96EDC7E170A6}"
-          SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="select BDF_VALOR&#xA;from tgen_def_batch&#xA;where BDF_COD='OPERADOR'"
+          SQLTask:Connection="{b8572465-49a2-46d4-aee7-d53eea297233}"
+          SQLTask:SqlStatementSource="select ISNULL(max(ss.ID),0) as ID FROM  [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
-            SQLTask:ResultName="BDF_VALOR"
-            SQLTask:DtsVariableName="User::Usuario" />
+            SQLTask:ResultName="ID"
+            SQLTask:DtsVariableName="User::UsersSessions_ID_APP" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Trunca_Tablas 1"
+      DTS:refId="Package\EST - GET - UsersSessions - ID  - INTER"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{E2ABC646-3562-42AB-858B-7102C257D9B6}"
+      DTS:DTSID="{3def22e6-5e3c-4c45-bdb9-23ccf8dd0ec9}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Trunca_Tablas 1"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ObjectName="EST - GET - UsersSessions - ID  - INTER"
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{7F83A890-E735-425B-A844-89FA64DC2176}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE SDM_Cumplimiento_Cliente_Accionista&#xA;GO&#xA;TRUNCATE TABLE SDM_Cumplimiento_Cliente_Direccion&#xA;GO&#xA;TRUNCATE TABLE SDM_Cumplimiento_Cliente_Representante&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{0838f47d-4fb7-40ae-926d-8da6f319777d}"
+          SQLTask:SqlStatementSource="SELECT ISNULL(VarValueInteger,0) as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' "
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="ID"
+            SQLTask:DtsVariableName="User::UsersSessions_ID_APP" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - GET - UsersSessionsHttpDetail - ID - APP"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3f74a744-d631-4a30-8382-5cf7d368129b}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - GET - UsersSessionsHttpDetail - ID - APP"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{b8572465-49a2-46d4-aee7-d53eea297233}"
+          SQLTask:SqlStatementSource="select ISNULL(max(ssdt.ID),0) as ID FROM  [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK)&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="ID"
+            SQLTask:DtsVariableName="User::UsersSessionsHttpDetail_ID_APP" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - GET - UsersSessionsHttpDetail - ID - INTER"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{773a70e6-e6be-407c-9735-cb7b3fc0a5cf}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - GET - UsersSessionsHttpDetail - ID - INTER"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0838f47d-4fb7-40ae-926d-8da6f319777d}"
+          SQLTask:SqlStatementSource="SELECT ISNULL(VarValueInteger,0) as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="ID"
+            SQLTask:DtsVariableName="User::UsersSessionsHttpDetail_ID_APP" />
+        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 22]"
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{6115E26C-F092-418E-84E2-F0D859E66C62}"
-      DTS:From="Package\Get_Usuario_Fisa 1"
+      DTS:DTSID="{B20977CF-F807-4C38-9943-080DC6DF4C13}"
+      DTS:From="Package\EST - GET - UsersSessions - ID  - APP"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 22"
-      DTS:To="Package\Actualiza Dato Configuracion 1" />
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - LOAD - IntermediaUsersSessions" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 23]"
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{C8A08888-4418-474E-A00F-C9C386420541}"
-      DTS:From="Package\Actualiza Dato Configuracion 1"
+      DTS:DTSID="{C58AF7C8-BA38-48F5-9EAC-9837F95E6E37}"
+      DTS:From="Package\EST - GET - UsersSessionsHttpDetail - ID - APP"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 23"
-      DTS:To="Package\Trunca_Tablas 1" />
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{F4DE85A6-31DE-41AA-B9CD-3E26B89AE70B}"
+      DTS:From="Package\EST - GET - UsersSessions - ID  - INTER"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DFT - LOAD - IntermediaUsersSessions" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{839BD19E-073D-47D3-B262-BB6925B2C290}"
+      DTS:From="Package\EST - GET - UsersSessionsHttpDetail - ID - INTER"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -194,45 +1604,45 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="223,42"
-          Id="Package\Actualiza Dato Configuracion 1"
-          TopLeft="20.537735849057,87.174528301887" />
+          Size="257,42"
+          Id="Package\EST - GET - UsersSessions - ID  - APP"
+          TopLeft="36.5,35.5" />
         <NodeLayout
-          Size="136,44"
-          Id="Package\Get_Usuario_Fisa 1"
-          TopLeft="20.5,17.056603773585" />
+          Size="301,42"
+          Id="Package\EST - GET - UsersSessionsHttpDetail - ID - APP"
+          TopLeft="609,42" />
         <NodeLayout
-          Size="136,44"
-          Id="Package\Trunca_Tablas 1"
-          TopLeft="20.537735849057,169.061320754717" />
+          Size="263,42"
+          Id="Package\DFT - LOAD - IntermediaUsersSessions"
+          TopLeft="44,121" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 22]"
-          TopLeft="88.5,61.056603773585">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="165,77.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.537735849057,26.117924528302"
+              EndConnector="-32,43.5"
               Start="0,0"
-              End="43.537735849057,18.617924528302">
+              End="-32,36">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.05896226415101" />
+                    End="0,21.9421768707483" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.05896226415101"
-                    Point2="0,13.058962264151"
-                    Point3="4,13.058962264151" />
+                    Point1="0,21.9421768707483"
+                    Point2="0,25.9421768707483"
+                    Point3="-4,25.9421768707483" />
                   <mssgle:LineSegment
-                    End="39.537735849057,13.058962264151" />
+                    End="-28,25.9421768707483" />
                   <mssgle:CubicBezierSegment
-                    Point1="39.537735849057,13.058962264151"
-                    Point2="43.537735849057,13.058962264151"
-                    Point3="43.537735849057,17.058962264151" />
+                    Point1="-28,25.9421768707483"
+                    Point2="-32,25.9421768707483"
+                    Point3="-32,29.9421768707483" />
                   <mssgle:LineSegment
-                    End="43.537735849057,18.617924528302" />
+                    End="-32,36" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -241,32 +1651,100 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="274,55"
+          Id="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail"
+          TopLeft="618,121" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 23]"
-          TopLeft="132.037735849057,129.174528301887">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="757.25,84">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-43.5,39.88679245283"
+              EndConnector="0,37"
               Start="0,0"
-              End="-43.5,32.38679245283">
+              End="0,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.943396226415" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.943396226415"
-                    Point2="0,19.943396226415"
-                    Point3="-4,19.943396226415" />
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="269,42"
+          Id="Package\EST - GET - UsersSessions - ID  - INTER"
+          TopLeft="302,38" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="436.5,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-218.5,41"
+              Start="0,0"
+              End="-218.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-39.5,19.943396226415" />
+                    End="0,20.4512471655329" />
                   <mssgle:CubicBezierSegment
-                    Point1="-39.5,19.943396226415"
-                    Point2="-43.5,19.943396226415"
-                    Point3="-43.5,23.943396226415" />
+                    Point1="0,20.4512471655329"
+                    Point2="0,24.4512471655329"
+                    Point3="-4,24.4512471655329" />
                   <mssgle:LineSegment
-                    End="-43.5,32.38679245283" />
+                    End="-214.5,24.4512471655329" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-214.5,24.4512471655329"
+                    Point2="-218.5,24.4512471655329"
+                    Point3="-218.5,28.4512471655329" />
+                  <mssgle:LineSegment
+                    End="-218.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="313,42"
+          Id="Package\EST - GET - UsersSessionsHttpDetail - ID - INTER"
+          TopLeft="921,42" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="1077.5,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-278.166666666667,37"
+              Start="0,0"
+              End="-278.166666666667,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.0711175616836" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.0711175616836"
+                    Point2="0,22.0711175616836"
+                    Point3="-4,22.0711175616836" />
+                  <mssgle:LineSegment
+                    End="-274.166666666667,22.0711175616836" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-274.166666666667,22.0711175616836"
+                    Point2="-278.166666666667,22.0711175616836"
+                    Point3="-278.166666666667,26.0711175616836" />
+                  <mssgle:LineSegment
+                    End="-278.166666666667,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -278,5 +1756,135 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\DFT - LOAD - IntermediaUsersSessions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="338,42"
+          Id="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions"
+          TopLeft="100,62" />
+        <NodeLayout
+          Size="343,42"
+          Id="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions"
+          TopLeft="100,208" />
+        <EdgeLayout
+          Id="Package\DFT - LOAD - IntermediaUsersSessions.Paths[OLE DB Source Output]"
+          TopLeft="270.25,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,104"
+              Start="0,0"
+              End="0,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="304,42"
+          Id="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="390,42"
+          Id="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail"
+          TopLeft="62,207" />
+        <EdgeLayout
+          Id="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail.Paths[OLE DB Source Output]"
+          TopLeft="212,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45,105"
+              Start="0,0"
+              End="45,97.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.5"
+                    Point2="0,52.5"
+                    Point3="4,52.5" />
+                  <mssgle:LineSegment
+                    End="41,52.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41,52.5"
+                    Point2="45,52.5"
+                    Point3="45,56.5" />
+                  <mssgle:LineSegment
+                    End="45,97.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Source - GET - UsersSessionsHttpDetail">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

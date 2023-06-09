@@ -11,6 +11,7 @@
 	--sp_help '[DBIntermediaGeolocalizacion].[dbo].[Intermedia_PARAMETROS_GEO]'
 	--Intermedia_PARAMETROS_GEO_CREATE_TABLE.SQL
 	--IntermediaUsersSessions_CREATE_TABLE.SQL
+
 	--IntermendiaUsersSessionsHttpDetail_CREATE_TABLE.SQL
 
 --01>SSS_Trans_Diario_Geo
@@ -69,6 +70,29 @@ USE [SII.Omega.Weblog];
   --where ssdt.userSessionID = 1236035
   where ssdt.userSessionID in (1236909, 1236941 )
   ORDER BY ssdt.[ID] DESC, ssdt.[userSessionID] DESC, ssdt.operationDate desc;
+
+
+   select ss.ID
+  --select top 10 ss.ID
+  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)
+  --where ss.ID between 1239900 and 1239914;
+  where ss.ID between @ID_Inicio and @ID_Final;
+
+  select ssdt.ID
+  --select top 10 ss.ID
+  FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK)
+  --where ssdt.ID between 1239900 and 1239914;
+  where ssdt.ID between @ID_Inicio and @ID_Final;
+
+
+	SELECT ss.[ID]  ,ss.[sessionID] ,ss.[userID] ,ss.[channelName] ,ss.[sessionData] ,ss.[createdDate] ,ss.[lastActivityDate] ,ss.[clientIP] ,ss.[mobileIMEI] ,ss.[mobileNumber] ,ss.[userCulture] ,ss.[timeout] FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) where ss.ID between @ID_Inicio and @ID_Final
+	--"SELECT ss.[ID]  ,ss.[sessionID] ,ss.[userID] ,ss.[channelName] ,ss.[sessionData] ,ss.[createdDate] ,ss.[lastActivityDate] ,ss.[clientIP] ,ss.[mobileIMEI] ,ss.[mobileNumber] ,ss.[userCulture] ,ss.[timeout]  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) where ss.ID between " + (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID]  + " and "  +  (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID_APP]
+	SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml]  FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between @ID_Inicio and @ID_Final
+	--"SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml] FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between " +  (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID]  + " and l" + (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID_APP]
+
+
+  select ISNULL(max(ss.ID),0) as ID FROM  [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) 
+  select ISNULL(max(ssdt.ID),0) as ID FROM  [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) 
 
 
 --TABLAS INTERMEDIAS
