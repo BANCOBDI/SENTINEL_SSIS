@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IS_Intermedias_GEO_APP"
   DTS:PackageType="5"
-  DTS:VersionBuild="157"
-  DTS:VersionGUID="{0AF13D82-440D-45FC-8B01-287AF1712E49}">
+  DTS:VersionBuild="195"
+  DTS:VersionGUID="{F08162AC-B101-4409-83B3-1806ADEBA117}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAATZierFBLLybVC5fugAky9AAAAAASAAACgAAAAEAAAAN7UUVlwBsLkArbwNOZiabEYAAAA3uVV2PKxGxx0rjELKDEr6V97IfyemuQHFAAAANu8A+YBg0KkQ5XJEskgsb+NXp9S</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAP7Iw3FDV/cEMQRL9CzT84AAAAAASAAACgAAAAEAAAAPBKVYW2gxxaPbIS1rrHyo8YAAAASuqJaGquQV2ig+z+yki7nVA1B7IWFV0BFAAAABGGskXoMLvFYYwKQE6rbY+zKru7</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABwcMVXAC/tHX60UHLE8a3OAAAAAASAAACgAAAAEAAAAP9SXl0CVpoLozOgquElG7gYAAAAjCCSS0+ZfARzID2s4ahKxn9H4iaB4zfBFAAAAMILRjjjgq4oapV7wdaTxc09YCfl</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD/Z13OqhOBydlbuZgVS+vfAAAAAASAAACgAAAAEAAAAFFnXKN7L6KlJGlCwkq2BtwYAAAAzPI0FsLKFOl4Wa9qB6rGhbefp7mWX1sQFAAAAKNH3qJeWoYyrgz5h/2z/SyrKueQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -88,7 +88,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADoqFxehqyGxQjfrW095zNyAAAAAASAAACgAAAAEAAAAFNN9iNfi/oxmJUtNLGG1GYgAAAA5sO/B38AGp9cKFUkEUtwBbHv9N52eSTpbFKfjU5PvNAUAAAAFkk1azHJzyxXwDbdtkmDif6S748</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADLoY/tIq8+kiKc6YXf4gFQAAAAAASAAACgAAAAEAAAAC/v/2XGEpqN6v47s/xpVnAgAAAATHZFbLHnhQ4+83dUY2BB1TWXbE9cRpMHD3GbdVFZbo4UAAAATGkEeNUaIwX0jsOgkgMbdYSMnDw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -104,15 +104,6 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{35346449-D084-4442-8CBA-68DB8BF4CA54}"
-      DTS:IncludeInDebugDump="6789"
-      DTS:Namespace="User"
-      DTS:ObjectName="CtrUsersSessionsHttpDetail_ID">
-      <DTS:VariableValue
-        DTS:DataType="20">0</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
       DTS:DTSID="{8CFC2E32-4B6A-46A6-8B0F-BF6FC9BB3082}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
@@ -122,10 +113,10 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6BC3301E-C66B-4BF3-B0EF-D5DF2B3B5659}"
+      DTS:DTSID="{35346449-D084-4442-8CBA-68DB8BF4CA54}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
-      DTS:ObjectName="CtrUsersSessions_ID">
+      DTS:ObjectName="CtrUsersSessionsHttpDetail_ID_PARAM">
       <DTS:VariableValue
         DTS:DataType="20">0</DTS:VariableValue>
     </DTS:Variable>
@@ -140,9 +131,18 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{6BC3301E-C66B-4BF3-B0EF-D5DF2B3B5659}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CtrUsersSessions_ID_PARAM">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{7FE56C12-38B3-4F0D-B66C-E62CCA188E7B}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;SELECT ss.[ID]  ,ss.[sessionID] ,ss.[userID] ,ss.[channelName] ,ss.[sessionData] ,ss.[createdDate] ,ss.[lastActivityDate] ,ss.[clientIP] ,ss.[mobileIMEI] ,ss.[mobileNumber] ,ss.[userCulture] ,ss.[timeout]  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) where ss.ID between &quot; + (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID]  + &quot; and &quot;  +  (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID_APP]"
+      DTS:Expression="&quot;SELECT ss.[ID]  ,ss.[sessionID] ,ss.[userID] ,ss.[channelName] ,ss.[sessionData] ,ss.[createdDate] ,ss.[lastActivityDate] ,ss.[clientIP] ,ss.[mobileIMEI] ,ss.[mobileNumber] ,ss.[userCulture] ,ss.[timeout]  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) where ss.ID between &quot; + (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID_PARAM]  + &quot; and &quot;  +  (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID_APP]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="QryToFillIntermediaUsersSessions">
@@ -153,12 +153,34 @@
       DTS:CreationName=""
       DTS:DTSID="{C42EE329-D584-42E0-94FF-F11E4271D9AD}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml] FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between &quot; +  (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID]  + &quot; and &quot; + (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID_APP]"
+      DTS:Expression="&quot;SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml] FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between &quot; +  (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID_PARAM]  + &quot; and &quot; + (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID_APP]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="QryToFillIntermendiaUsersSessionsHttpDetail">
       <DTS:VariableValue
         DTS:DataType="8">SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml] FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between 0 and 0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D13ABAD9-144B-4AFB-B56D-8DBC78E4E822}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  &quot; +  (DT_STR, 18 , 1252) @[User::CtrUsersSessions_ID_APP]  +  &quot;  where VarKey = 'UsersSessions.ID'&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QryToUpdPramIntermediaUsersSessions">
+      <DTS:VariableValue
+        DTS:DataType="8">UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  0  where VarKey = 'UsersSessions.ID'</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9E6F9DBE-D483-4C23-9FF7-A4F820BEDDC3}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =&quot; +  (DT_STR, 18 , 1252) @[User::CtrUsersSessionsHttpDetail_ID_APP]   +  &quot;  where VarKey = 'UsersSessionsHttpDetail.ID'&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QryToUpdPramIntermendiaUsersSessionsHttpDetail">
+      <DTS:VariableValue
+        DTS:DataType="8">UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =0  where VarKey = 'UsersSessionsHttpDetail.ID'</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -178,13 +200,21 @@
         </SOAP-ENV:Envelope>
       </DTS:VariableValue>
     </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1FF114A8-FEB2-4D10-81AC-34724C883CB7}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarBatchSize">
+      <DTS:VariableValue
+        DTS:DataType="3">1000</DTS:VariableValue>
+    </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\DFT - LOAD - IntermediaUsersSessions"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{DD2CBEC7-B428-4635-994A-F34002211D47}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -807,7 +837,6 @@
       DTS:refId="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{17917F58-7610-47A7-B59D-AA0CC20AF76F}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1482,7 +1511,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessions - ID  - APP"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1491,7 +1520,7 @@
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="ID"
-            SQLTask:DtsVariableName="User::UsersSessions_ID_APP" />
+            SQLTask:DtsVariableName="User::CtrUsersSessions_ID_APP" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1503,7 +1532,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessions - ID  - INTER"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1512,7 +1541,7 @@
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="ID"
-            SQLTask:DtsVariableName="User::UsersSessions_ID_APP" />
+            SQLTask:DtsVariableName="User::CtrUsersSessions_ID_PARAM" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1524,7 +1553,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessionsHttpDetail - ID - APP"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1533,7 +1562,7 @@
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="ID"
-            SQLTask:DtsVariableName="User::UsersSessionsHttpDetail_ID_APP" />
+            SQLTask:DtsVariableName="User::CtrUsersSessionsHttpDetail_ID_APP" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1545,7 +1574,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessionsHttpDetail - ID - INTER"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1554,8 +1583,42 @@
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="ID"
-            SQLTask:DtsVariableName="User::UsersSessionsHttpDetail_ID_APP" />
+            SQLTask:DtsVariableName="User::CtrUsersSessionsHttpDetail_ID_PARAM" />
         </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - POST - UsersSessions - ID - INTER"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{f289645c-46bc-49ac-8149-1a748955efe2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - POST - UsersSessions - ID - INTER"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0838f47d-4fb7-40ae-926d-8da6f319777d}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::QryToUpdPramIntermediaUsersSessions" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST - POST - UsersSessionsHttpDetail - ID - INTER"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E589C04C-D8DB-4934-AAB0-2D78B16C26BC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST - POST - UsersSessionsHttpDetail - ID - INTER"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0838f47d-4fb7-40ae-926d-8da6f319777d}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::QryToUpdPramIntermendiaUsersSessionsHttpDetail" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1592,6 +1655,26 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{C28E83DD-41D5-4C57-B847-53CF55171202}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::CtrUsersSessionsHttpDetail_ID_APP]&gt;@[User::CtrUsersSessionsHttpDetail_ID_PARAM]"
+      DTS:From="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\EST - POST - UsersSessionsHttpDetail - ID - INTER" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{8DE6CA8F-7202-4830-8C9C-FDD480D9E2A9}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::CtrUsersSessions_ID_APP] &gt;@[User::CtrUsersSessions_ID_PARAM]"
+      DTS:From="Package\DFT - LOAD - IntermediaUsersSessions"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\EST - POST - UsersSessions - ID - INTER" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1604,28 +1687,48 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="257,42"
-          Id="Package\EST - GET - UsersSessions - ID  - APP"
-          TopLeft="36.5,35.5" />
-        <NodeLayout
-          Size="301,42"
-          Id="Package\EST - GET - UsersSessionsHttpDetail - ID - APP"
-          TopLeft="609,42" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="263,42"
           Id="Package\DFT - LOAD - IntermediaUsersSessions"
-          TopLeft="44,121" />
+          TopLeft="44,119" />
+        <NodeLayout
+          Size="274,55"
+          Id="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail"
+          TopLeft="630,144" />
+        <NodeLayout
+          Size="257,42"
+          Id="Package\EST - GET - UsersSessions - ID  - APP"
+          TopLeft="37.5,33.5" />
+        <NodeLayout
+          Size="269,42"
+          Id="Package\EST - GET - UsersSessions - ID  - INTER"
+          TopLeft="315,41" />
+        <NodeLayout
+          Size="301,42"
+          Id="Package\EST - GET - UsersSessionsHttpDetail - ID - APP"
+          TopLeft="609,43" />
+        <NodeLayout
+          Size="313,42"
+          Id="Package\EST - GET - UsersSessionsHttpDetail - ID - INTER"
+          TopLeft="922,46" />
+        <NodeLayout
+          Size="272,42"
+          Id="Package\EST - POST - UsersSessions - ID - INTER"
+          TopLeft="37,218" />
+        <NodeLayout
+          Size="319,42"
+          Id="Package\EST - POST - UsersSessionsHttpDetail - ID - INTER"
+          TopLeft="611,235" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="165,77.5">
+          TopLeft="166,75.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-32,43.5"
+              EndConnector="-33,43.5"
               Start="0,0"
-              End="-32,36">
+              End="-33,36">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1636,13 +1739,13 @@
                     Point2="0,25.9421768707483"
                     Point3="-4,25.9421768707483" />
                   <mssgle:LineSegment
-                    End="-28,25.9421768707483" />
+                    End="-29,25.9421768707483" />
                   <mssgle:CubicBezierSegment
-                    Point1="-28,25.9421768707483"
-                    Point2="-32,25.9421768707483"
-                    Point3="-32,29.9421768707483" />
+                    Point1="-29,25.9421768707483"
+                    Point2="-33,25.9421768707483"
+                    Point3="-33,29.9421768707483" />
                   <mssgle:LineSegment
-                    End="-32,36" />
+                    End="-33,36" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1651,24 +1754,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="274,55"
-          Id="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail"
-          TopLeft="618,121" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="757.25,84">
+          TopLeft="759.5,85">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="-36.8333333333334,59"
               Start="0,0"
-              End="0,29.5">
+              End="-36.8333333333334,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,31.1944847605225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.1944847605225"
+                    Point2="0,35.1944847605225"
+                    Point3="-4,35.1944847605225" />
+                  <mssgle:LineSegment
+                    End="-32.8333333333334,35.1944847605225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32.8333333333334,35.1944847605225"
+                    Point2="-36.8333333333334,35.1944847605225"
+                    Point3="-36.8333333333334,39.1944847605225" />
+                  <mssgle:LineSegment
+                    End="-36.8333333333334,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1677,36 +1788,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="269,42"
-          Id="Package\EST - GET - UsersSessions - ID  - INTER"
-          TopLeft="302,38" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="436.5,80">
+          TopLeft="449.5,83">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-218.5,41"
+              EndConnector="-231.5,36"
               Start="0,0"
-              End="-218.5,33.5">
+              End="-231.5,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.4512471655329" />
+                    End="0,17.469387755102" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.4512471655329"
-                    Point2="0,24.4512471655329"
-                    Point3="-4,24.4512471655329" />
+                    Point1="0,17.469387755102"
+                    Point2="0,21.469387755102"
+                    Point3="-4,21.469387755102" />
                   <mssgle:LineSegment
-                    End="-214.5,24.4512471655329" />
+                    End="-227.5,21.469387755102" />
                   <mssgle:CubicBezierSegment
-                    Point1="-214.5,24.4512471655329"
-                    Point2="-218.5,24.4512471655329"
-                    Point3="-218.5,28.4512471655329" />
+                    Point1="-227.5,21.469387755102"
+                    Point2="-231.5,21.469387755102"
+                    Point3="-231.5,25.469387755102" />
                   <mssgle:LineSegment
-                    End="-218.5,33.5" />
+                    End="-231.5,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1715,42 +1822,86 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="313,42"
-          Id="Package\EST - GET - UsersSessionsHttpDetail - ID - INTER"
-          TopLeft="921,42" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="1077.5,84">
+          TopLeft="1078.5,88">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-278.166666666667,37"
+              EndConnector="-267.166666666667,56"
               Start="0,0"
-              End="-278.166666666667,29.5">
+              End="-267.166666666667,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.0711175616836" />
+                    End="0,29.4049346879535" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.0711175616836"
-                    Point2="0,22.0711175616836"
-                    Point3="-4,22.0711175616836" />
+                    Point1="0,29.4049346879535"
+                    Point2="0,33.4049346879535"
+                    Point3="-4,33.4049346879535" />
                   <mssgle:LineSegment
-                    End="-274.166666666667,22.0711175616836" />
+                    End="-263.166666666667,33.4049346879535" />
                   <mssgle:CubicBezierSegment
-                    Point1="-274.166666666667,22.0711175616836"
-                    Point2="-278.166666666667,22.0711175616836"
-                    Point3="-278.166666666667,26.0711175616836" />
+                    Point1="-263.166666666667,33.4049346879535"
+                    Point2="-267.166666666667,33.4049346879535"
+                    Point3="-267.166666666667,37.4049346879535" />
                   <mssgle:LineSegment
-                    End="-278.166666666667,29.5" />
+                    End="-267.166666666667,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="768.75,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,6.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="174.25,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,16.75,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1762,13 +1913,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="338,42"
-          Id="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions"
-          TopLeft="100,62" />
-        <NodeLayout
           Size="343,42"
           Id="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions"
           TopLeft="100,208" />
+        <NodeLayout
+          Size="338,42"
+          Id="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions"
+          TopLeft="100,62" />
         <EdgeLayout
           Id="Package\DFT - LOAD - IntermediaUsersSessions.Paths[OLE DB Source Output]"
           TopLeft="270.25,104">
@@ -1794,6 +1945,27 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail">
     <LayoutInfo>
@@ -1845,15 +2017,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Source - GET - UsersSessions">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - LOAD - IntermediaUsersSessions\OLE DB Destination - LOAD  -  IntermediaUsersSessions">
+    design-time-name="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1870,19 +2034,6 @@
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - LOAD -IntermendiaUsersSessionsHttpDetail\OLE DB Destination - LOAD  -  IntermediaUsersSessionsHttpDetail">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

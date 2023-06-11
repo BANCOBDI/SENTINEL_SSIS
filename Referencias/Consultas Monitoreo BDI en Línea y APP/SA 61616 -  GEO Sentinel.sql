@@ -91,6 +91,7 @@ USE [SII.Omega.Weblog];
 	--"SELECT ssdt.[ID] ,ssdt.[userSessionID] ,ssdt.[clientIP] ,ssdt.[operationDate] ,ssdt.[userAgent] ,ssdt.[host] ,ssdt.[referer] ,ssdt.[httpMethod] ,ssdt.[requestUri] ,ssdt.[httpStatusCode] ,ssdt.[cookies] ,ssdt.[httpParams] ,ssdt.[responseHtml] FROM [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) where ssdt.ID between " +  (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID]  + " and l" + (DT_STR, 18 , 1252)@[User::CtrUsersSessionsHttpDetail_ID_APP]
 
 
+  USE [SII.Omega.Weblog];
   select ISNULL(max(ss.ID),0) as ID FROM  [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK) 
   select ISNULL(max(ssdt.ID),0) as ID FROM  [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) 
 

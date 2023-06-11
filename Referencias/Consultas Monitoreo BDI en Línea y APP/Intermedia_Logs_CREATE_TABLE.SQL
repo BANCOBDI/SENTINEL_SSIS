@@ -1,7 +1,9 @@
 USE [DBIntermediaGeolocalizacion]
 GO
-
-/*SET ANSI_NULLS ON
+--DROP TRIGGER [dbo].[TRG_Intermedia_Logs]
+--DROP TABLE [dbo].[Intermedia_Logs]
+GO
+SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
@@ -9,13 +11,16 @@ GO
 
 CREATE TABLE [dbo].[Intermedia_Logs](
 	[ID] int IDENTITY (1,1) NOT NULL,
-	[ITEM] [nvarchar](50) NOT NULL,
-	[DETAILS] [nvarchar](4000) NULL,
+	[OPERACTION] [nvarchar](1) NOT NULL,
+	[VarKey] [nvarchar](50) NOT NULL,
+	[VarValueTxt] [nvarchar](4000) NULL,
+	[VarValueDecimal] [Decimal] (38,6) NULL,
+	[VarValueInteger] [bigint] NULL,
 	[I_DATE] [datetime] NULL,
 	[I_USER] [nvarchar](256)  NULL,
 	CONSTRAINT PK_Intermedia_Logs PRIMARY KEY CLUSTERED ([ID])
 ) ON [PRIMARY]
-GO*/
+GO
 
 SET ANSI_NULLS ON
 GO
@@ -37,11 +42,11 @@ BEGIN
 
     -- Insert statements for trigger here
 	--INSERT
-	select getdate()
-		UPDATE [dbo].[TRG_Intermedia_Logs]
+	--select getdate()
+		UPDATE [dbo].[Intermedia_Logs]
 		SET [I_DATE] =getdate()
 		   ,[I_USER] = ORIGINAL_LOGIN()
-		FROM [dbo].[TRG_Intermedia_Logs] DT 
+		FROM [dbo].[Intermedia_Logs] DT 
 		INNER JOIN inserted I ON (DT.[ID] = I.[ID]);
 END
 GO

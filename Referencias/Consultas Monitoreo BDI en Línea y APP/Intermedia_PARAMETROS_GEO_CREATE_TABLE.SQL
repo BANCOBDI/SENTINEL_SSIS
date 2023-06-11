@@ -1,6 +1,8 @@
 USE [DBIntermediaGeolocalizacion]
 GO
-
+--DROP TRIGGER dbo.TRG_Intermedia_PARAMETROS_GEO
+--DROP TABLE [dbo].[Intermedia_PARAMETROS_GEO]
+GO
 SET ANSI_NULLS ON
 GO
 
@@ -30,8 +32,8 @@ GO
 -- Create date: 20230609
 -- Description:	Llenado del Audit Trail
 -- =============================================
-CREATE TRIGGER dbo.TRG_Intermedia_PARAMETROS_GEO 
---ALTER TRIGGER dbo.TRG_Intermedia_PARAMETROS_GEO 
+--CREATE TRIGGER dbo.TRG_Intermedia_PARAMETROS_GEO 
+ALTER TRIGGER dbo.TRG_Intermedia_PARAMETROS_GEO 
     ON  dbo.Intermedia_PARAMETROS_GEO AFTER INSERT,DELETE,UPDATE
 AS 
 BEGIN
@@ -54,35 +56,68 @@ BEGIN
 			 FROM [dbo].[Intermedia_PARAMETROS_GEO] DT 
 			 INNER JOIN inserted I ON (DT.[ID] = I.[ID])
 			 INNER JOIN deleted D ON (DT.[ID] = d.[ID]);
+
+			INSERT INTO [dbo].[Intermedia_Logs] ([OPERACTION] ,[VarKey] ,[VarValueTxt] ,[VarValueDecimal],[VarValueInteger])
+			SELECT 'U', DT.[VarKey] ,DT.[VarValueTxt] , DT.[VarValueDecimal], DT.[VarValueInteger]
+			FROM [dbo].[Intermedia_PARAMETROS_GEO] DT 
+			INNER JOIN deleted D ON (DT.[ID] = D.[ID]);
 		END
 		ELSE
 		BEGIN
 			--DELETE
-			select getdate()
+			--select getdate()
+			INSERT INTO [dbo].[Intermedia_Logs] ([OPERACTION] ,[VarKey] ,[VarValueTxt] ,[VarValueDecimal],[VarValueInteger])
+			SELECT 'D', DT.[VarKey] ,DT.[VarValueTxt] , DT.[VarValueDecimal], DT.[VarValueInteger]
+			FROM [dbo].[Intermedia_PARAMETROS_GEO] DT 
+			INNER JOIN deleted D ON (DT.[ID] = D.[ID]);
 		END
 	END
 	ELSE
 	   BEGIN
 			--INSERT
-			select getdate()
+			--select getdate()
 			UPDATE [dbo].[Intermedia_PARAMETROS_GEO]
 			   SET [I_DATE] =getdate()
 				  ,[I_USER] = ORIGINAL_LOGIN()
+				  ,[U_DATE] = NULL
+				  ,[U_USER] = NULL
+			 FROM [dbo].[Intermedia_PARAMETROS_GEO] DT 
+			 INNER JOIN inserted I ON (DT.[ID] = I.[ID]);
+
+			 INSERT INTO [dbo].[Intermedia_Logs] ([OPERACTION] ,[VarKey] ,[VarValueTxt] ,[VarValueDecimal],[VarValueInteger])
+			 SELECT 'I', DT.[VarKey] ,DT.[VarValueTxt] , DT.[VarValueDecimal], DT.[VarValueInteger]
 			 FROM [dbo].[Intermedia_PARAMETROS_GEO] DT 
 			 INNER JOIN inserted I ON (DT.[ID] = I.[ID]);
 	   END 
 	END
 GO
-
+--TRUNCATE TABLE [dbo].[Intermedia_PARAMETROS_GEO];
+GO
 INSERT INTO [dbo].[Intermedia_PARAMETROS_GEO] ([VarKEY], [VarValueInteger]) VALUES ('UsersSessions.ID',NULL);
 INSERT INTO [dbo].[Intermedia_PARAMETROS_GEO] ([VarKEY], [VarValueInteger]) VALUES ('UsersSessionsHttpDetail.ID',NULL);
 
 GO
 
+USE [DBIntermediaGeolocalizacion]
 SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
 
 
 
---SELECT ISNULL(VarValueInteger,0) as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' 
---SELECT ISNULL(VarValueInteger,0) as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'
+--SELECT ISNULL(VarValueInteger,0) +1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' 
+--SELECT ISNULL(VarValueInteger,0) +1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'
+
+"UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  where VarKey = 'UsersSessions.ID'"
+"UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  where VarKey = 'UsersSessionsHttpDetail.ID'"
+
+
+USE [DBIntermediaGeolocalizacion]
+SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
+TRUNCATE TABLE [dbo].[IntermediaUsersSessions];
+TRUNCATE TABLE [dbo].[IntermendiaUsersSessionsHttpDetail];
+UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] = NULL where VarKey = 'UsersSessions.ID'
+UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] = NULL where VarKey = 'UsersSessionsHttpDetail.ID'
+SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
+SELECT ISNULL(VarValueInteger,0) + 1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' 
+SELECT ISNULL(VarValueInteger,0) + 1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'
+SELECT * FROM [dbo].[Intermedia_Logs]
 
