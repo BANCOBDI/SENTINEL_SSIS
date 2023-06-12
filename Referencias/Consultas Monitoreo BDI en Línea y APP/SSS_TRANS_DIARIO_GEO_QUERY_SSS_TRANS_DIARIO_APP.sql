@@ -59,7 +59,6 @@ BEGIN
     -- Insert statements for procedure here
 	SET @miCursor = CURSOR FOR
 	SELECT
-	TOP (200)
 	CONCAT(ss.[ID],'-',ISNULL(@SSDT_ID,0)) AS ID_TRANSACCION,
 	@Id_UEN as Id_UEN,
 	ss.createdDate as Fecha_Ingreso,
@@ -74,9 +73,9 @@ BEGIN
 	  --FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)
 	  FROM [DBIntermediaGeolocalizacion].[dbo].[IntermediaUsersSessions] ss WITH (NOLOCK)
     WHERE ss.createdDate BETWEEN @FECHAHORA_INICIO AND @FECHAHORA_FINAL
+	AND NOT EXISTS (SELECT Id_Transaccion FROM [dbo].[SSS_TRANS_DIARIO_GEO] WHERE Id_Transaccion = CONCAT(ss.[ID],'-',ISNULL(@SSDT_ID,0)) AND [TRAMA_ORIGEN] = @DefaultEventApp)
 	union all
 	SELECT
-	TOP (200)
 	CONCAT(ss.[ID],'-',ISNULL(ssdt.[ID],0)) AS ID_TRANSACCION,
 	@Id_UEN as Id_UEN,
 	ISNULL(ssdt.operationDate,ss.createdDate) as Fecha_Ingreso,
@@ -108,6 +107,7 @@ BEGIN
 	  LEFT JOIN [DBIntermediaGeolocalizacion].[dbo].[IntermendiaUsersSessionsHttpDetail] ssdt WITH (NOLOCK) on (ssdt.[userSessionID] = ss.[ID])
 	WHERE ssdt.[ID] IS NOT NULL  
 	AND ISNULL(ssdt.operationDate,ss.createdDate) BETWEEN @FECHAHORA_INICIO AND @FECHAHORA_FINAL
+	AND NOT EXISTS (SELECT Id_Transaccion FROM [dbo].[SSS_TRANS_DIARIO_GEO] WHERE Id_Transaccion = CONCAT(ss.[ID],'-',ISNULL(ssdt.[ID],0)))
 	ORDER BY 3, 1 ASC;
 
 	OPEN @miCursor;
@@ -126,3 +126,5 @@ BEGIN
 	DEALLOCATE @miCursor;
 END
 GO
+
+
