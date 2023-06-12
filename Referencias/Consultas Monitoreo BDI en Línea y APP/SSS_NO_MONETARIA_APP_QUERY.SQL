@@ -1,80 +1,7 @@
 --SSS_NO_MONETARIA_APP_QUERY.SQL
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-USE [SII.Omega.Weblog];
-
-IF OBJECT_ID(N'tempdb..#SSS_NO_MONETARIA_APP') IS NOT NULL
-BEGIN
-DROP TABLE #SSS_NO_MONETARIA_APP
-END
-
-
-CREATE TABLE #SSS_NO_MONETARIA_APP(
-No_trx	Varchar(50),
-Fecha	datetime,
-Tipo_trx	Varchar(250),
-Categ_Trans	Varchar(250),
-Evento	Varchar(80),
-Estatus	Varchar(50),
-Canal	Varchar(50),
-Oficina_del_Transaccion	Varchar(50),
-Tipo_Cliente	Varchar(50),
-No_Contrato	Varchar(50),
-No_Terminal	Varchar(50),
-COD_Comercio	Varchar(50),
-Nombre_Comercio	Varchar(50),
-No_Socio	Varchar(50),
-No_Sucursal_Socio	Varchar(50),
-No_Agencia	Varchar(50),
-COD_Cajero	Varchar(50),
-Numero_SIB	Varchar(50),
-COD_Operacion_SIB	Varchar(50),
-No_Sesion	Varchar(50),
-No_Aprobacion_Tarjeta	Varchar(50),
-COD_TRX_Procesador	Varchar(50),
-COD_Procesador	Varchar(50),
-Nombre_Red	Varchar(50),
-No_CTA_Origen	Varchar(50),
-Tipo_CTA_Origen	Varchar(50),
-No_CTA_Destino	Varchar(50),
-Tipo_CTA_Destino	Varchar(50),
-CTA_entidad_remitente	Varchar(50),
-cliente_remitente	Varchar(50),
-Tipo_ID_remitente	Varchar(50),
-Entidad_remitente	Varchar(50),
-CTA_entidad_receptora	Varchar(50),
-cliente_receptor	Varchar(50),
-Tipo_ID_receptor	Varchar(50),
-IDENTI_receptor	Varchar(50),
-Entidad_receptora	Varchar(50),
-Email	Varchar(256),
-Estatus_cuenta	Varchar(50),
-Referencia_Usuario	Varchar(50),
-Moneda_Origen	Varchar(6),
-Monto_Origen	DECIMAL(18,4),
-Moneda_Destino	Varchar(6),
-Monto_Destino	DECIMAL(18,4),
-Subtotal	DECIMAL(18,4),
-Monto_Comision_Usuario	DECIMAL(18,4),
-Impuesto	DECIMAL(18,4),
-Monto_Impuesto	DECIMAL(18,4),
-Monto_Impuesto_2_	DECIMAL(18,4),
-Comision_En_Linea	Varchar(50),
-Detalle_trx	Varchar(250),
-Referencia	Varchar(50),
-Envia_Notificacion	INT,
-Email_Beneficiario	Varchar(256),
-Usuario	Varchar(50),
-COD_Respuesta_Backend	Varchar(8000),
-Descripcion_Backend	Varchar(8000),
-No_Aprobacion_Trader	Varchar(50),
-Categoria_CTA_Origen	Varchar(50),
-SubCategoria_CTA_Origen	Varchar(50),
-Categoria_CTA_Destino	Varchar(50),
-SubCategoria_CTA_Destino	Varchar(50),
-Responsable	Varchar(50)
-);
-
+--USE [SII.Omega.Weblog]
+USE [DBIntermediaGeolocalizacion]
 
 --CREATE PROCEDURE SP_NO_MONETARIA_APP
 --AS
@@ -230,26 +157,15 @@ SELECT
 		'0', '') AS EVENTO
   --select ss.*
   --select ssdt.*
-  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)
-  LEFT JOIN [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) on (ssdt.[userSessionID] = ss.[ID])
+  --FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)
+  FROM [DBIntermediaGeolocalizacion].[dbo].[IntermediaUsersSessions] ss WITH (NOLOCK)
+  --LEFT JOIN [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) on (ssdt.[userSessionID] = ss.[ID])
+  LEFT JOIN [DBIntermediaGeolocalizacion].[dbo].[IntermendiaUsersSessionsHttpDetail] ssdt WITH (NOLOCK) on (ssdt.[userSessionID] = ss.[ID])
   WHERE ss.[ID] is not null
   --and CONVERT(datetime,ss.[createdDate],112) BETWEEN CONVERT(datetime, @FECHAHORA_INICIO, 112) AND CONVERT(datetime, @FECHAHORA_FINAL, 112)
-  and ss.[createdDate] BETWEEN @FECHAHORA_INICIO AND  @FECHAHORA_FINAL
+  --and ss.[createdDate] BETWEEN @FECHAHORA_INICIO AND  @FECHAHORA_FINAL
   --ORDER BY ss.[ID];
   ORDER BY ss.[ID] DESC;
-
-  sp_help '[SII.Omega.Weblog].[dbo].[UsersSessions]'
-  select top 100 ss.*
-  FROM [SII.Omega.Weblog].[dbo].[UsersSessions] ss WITH (NOLOCK)
-  WHERE ss.[ID] is not null
-  ORDER BY ss.[ID] DESC;
-  
-  sp_help '[SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail]'
-  select top 100 ssdt.*
-  FROM  [SII.Omega.Weblog].[dbo].[UsersSessionsHttpDetail] ssdt WITH (NOLOCK) 
-  ORDER BY ssdt.[ID] DESC, ssdt.[userSessionID] DESC, ssdt.operationDate desc;
-
-
 
   OPEN @miCursor;
 
@@ -259,7 +175,7 @@ SELECT
 
   WHILE @@FETCH_STATUS = 0
   BEGIN
-	SET @No_trx = @ID;
+	SET @No_trx = @ID+'.'+@sessionId;
 	SET @Fecha = @operationDate;
 	SET @Tipo_trx = NULL;
 	SET @Categ_Trans = NULL;

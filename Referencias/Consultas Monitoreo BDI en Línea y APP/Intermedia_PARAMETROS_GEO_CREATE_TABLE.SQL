@@ -97,27 +97,3 @@ INSERT INTO [dbo].[Intermedia_PARAMETROS_GEO] ([VarKEY], [VarValueInteger]) VALU
 INSERT INTO [dbo].[Intermedia_PARAMETROS_GEO] ([VarKEY], [VarValueInteger]) VALUES ('UsersSessionsHttpDetail.ID',NULL);
 
 GO
-
-USE [DBIntermediaGeolocalizacion]
-SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
-
-
-
---SELECT ISNULL(VarValueInteger,0) +1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' 
---SELECT ISNULL(VarValueInteger,0) +1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'
-
-"UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  where VarKey = 'UsersSessions.ID'"
-"UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  where VarKey = 'UsersSessionsHttpDetail.ID'"
-
-
-USE [DBIntermediaGeolocalizacion]
-SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
-TRUNCATE TABLE [dbo].[IntermediaUsersSessions];
-TRUNCATE TABLE [dbo].[IntermendiaUsersSessionsHttpDetail];
-UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] = NULL where VarKey = 'UsersSessions.ID'
-UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] = NULL where VarKey = 'UsersSessionsHttpDetail.ID'
-SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
-SELECT ISNULL(VarValueInteger,0) + 1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' 
-SELECT ISNULL(VarValueInteger,0) + 1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'
-SELECT * FROM [dbo].[Intermedia_Logs]
-

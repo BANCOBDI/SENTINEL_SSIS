@@ -6,13 +6,15 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+USE [DBIntermediaGeolocalizacion]
+GO
 --00>
 	--sp_help '[DBIntermediaGeolocalizacion].[dbo].[Intermedia_PARAMETROS_GEO]'
 	--Intermedia_PARAMETROS_GEO_CREATE_TABLE.SQL
 	--IntermediaUsersSessions_CREATE_TABLE.SQL
-
+	SELECT * FROM [dbo].[IntermediaUsersSessions];
 	--IntermendiaUsersSessionsHttpDetail_CREATE_TABLE.SQL
+    SELECT * FROM [dbo].[IntermendiaUsersSessionsHttpDetail];
 
 --01>SSS_Trans_Diario_Geo
 --02>SSS_No_Monetaria_APP
@@ -113,3 +115,32 @@ SELECT * FROM SSS_NO_MONETARIA_APP;
 SELECT * FROM SSS_NO_MONETARIA_OMNIA; 
 
 
+
+--Inicialicacion de tablas para proposito de desarrollo
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+USE [DBIntermediaGeolocalizacion]
+SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
+TRUNCATE TABLE [dbo].[IntermediaUsersSessions];
+TRUNCATE TABLE [dbo].[IntermendiaUsersSessionsHttpDetail];
+UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] = NULL where VarKey = 'UsersSessions.ID'
+UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] = NULL where VarKey = 'UsersSessionsHttpDetail.ID'
+SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
+SELECT ISNULL(VarValueInteger,0) + 1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' 
+SELECT ISNULL(VarValueInteger,0) + 1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'
+SELECT * FROM [dbo].[Intermedia_Logs]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--TRUNCATE TABLE [DBIntermediaGeolocalizacion].[dbo].[IntermediaUsersSessions]
+--TRUNCATE TABLE [DBIntermediaGeolocalizacion].[dbo].[IntermendiaUsersSessionsHttpDetail]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+USE [DBIntermediaGeolocalizacion]
+SELECT * FROM [dbo].[Intermedia_PARAMETROS_GEO]
+
+
+
+--SELECT ISNULL(VarValueInteger,0) +1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessions.ID' 
+--SELECT ISNULL(VarValueInteger,0) +1 as ID FROM [dbo].[Intermedia_PARAMETROS_GEO] WITH (NOLOCK) where VarKey = 'UsersSessionsHttpDetail.ID'
+
+--"UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  where VarKey = 'UsersSessions.ID'"
+--"UPDATE [dbo].[Intermedia_PARAMETROS_GEO]  SET [VarValueInteger] =  where VarKey = 'UsersSessionsHttpDetail.ID'"

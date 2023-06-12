@@ -30,7 +30,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABIQVVkjgLlydq4xskZhkybAAAAAASAAACgAAAAEAAAAHLORMpsq9MTa7yF+DtNu58YAAAABuXWpqZCZE/9kh91LviP6k4SMQg1zj2PFAAAANlUX6pXOP+75ic3zaPTfINAV1dA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD3rfQNFKqP3rXNpziORmmXAAAAAASAAACgAAAAEAAAADWVF/+1CTxjk8At76xApw4YAAAAIbOVZi8JKxOnlpJjRsr3SzvG8ctbpm3EFAAAAHzZtZKRCF5F97AwmelW4pBdUKsy</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAp/A2EuMg8E0rBEroGbO+uAAAAAASAAACgAAAAEAAAAPDkJKf2/MrlQ099yirDZXgYAAAA7oQWd66FnfvdWN4GiYQ8ERbq0DQsj5hrFAAAAIhw+oX3PdppDHZ+aM8XdUuD+nGG</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACe6kSz/zC2gWEr9oVzR5adAAAAAASAAACgAAAAEAAAAPWgvVp/zHwv+sZ/anMWxb4YAAAAAKcDxnaY0W/ZznRwh5g2etNF28/GgFMaFAAAAEFo6ZnKseSNi4hdCnU9ZurKiJLH</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -88,7 +88,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA+0WDsbc4OelB6XovvqDZkAAAAAASAAACgAAAAEAAAAALh1WzS/1vvqHTzcnnRmakgAAAA0yZMv1Oa8ySCU6haP4Q1xn6vixwkbfVDiUb3iVTM1kgUAAAADVD5eiXAlj6GwuUL7JTiqRrFw2c</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARo5q/1tHAU+8fbyG9Jm7XgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACXo/8HuEb5zjzQbKQ/RwraAAAAAASAAACgAAAAEAAAABP+LOHJZ/D2x8KwWYWyamMgAAAAEUSpl9h3r7/Arq1vMjrWiCZoIIqEQPrpsjgxhcK/tAEUAAAApv5qp4+ggYIQMc0JF7x7091HRL4</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1511,7 +1511,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessions - ID  - APP"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1532,7 +1532,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessions - ID  - INTER"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1553,7 +1553,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessionsHttpDetail - ID - APP"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1574,7 +1574,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="EST - GET - UsersSessionsHttpDetail - ID - INTER"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
