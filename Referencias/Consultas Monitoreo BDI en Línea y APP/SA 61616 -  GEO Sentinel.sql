@@ -16,11 +16,15 @@ GO
 	--IntermendiaUsersSessionsHttpDetail_CREATE_TABLE.SQL
     SELECT * FROM [dbo].[IntermendiaUsersSessionsHttpDetail];
 
+--APP
 --01>SSS_Trans_Diario_Geo
 --02>SSS_No_Monetaria_APP
+--OMNIA
+--01>SSS_Trans_Diario_Geo
 --03>SSS_No_Monetaria_OMNIA
 --
---04>SSS_trans_diario
+--SSS_trans_diario(APP+OMNIA)
+--01>SSS_Trans_Diario_Geo>04>SSS_trans_diario
 
 
 --FUENTE DE DATOS

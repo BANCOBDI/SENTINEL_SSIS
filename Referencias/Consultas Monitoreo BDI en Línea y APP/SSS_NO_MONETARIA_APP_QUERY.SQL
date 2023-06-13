@@ -278,7 +278,7 @@ SELECT
 		,REFERENCIA_USUARIO,MONEDA_ORIGEN,MONTO_ORIGEN,MONEDA_DESTINO,MONTO_DESTINO,SUBTOTAL,MONTO_COMISION_USUARIO,IMPUESTO
 		,MONTO_IMPUESTO,MONTO_IMPUESTO_2_,COMISION_EN_LINEA,DETALLE_TRX,REFERENCIA,ENVIA_NOTIFICACION,EMAIL_BENEFICIARIO
 		,USUARIO,COD_RESPUESTA_BACKEND,DESCRIPCION_BACKEND,NO_APROBACION_TRADER,CATEGORIA_CTA_ORIGEN,SUBCATEGORIA_CTA_ORIGEN
-		,CATEGORIA_CTA_DESTINO,SUBCATEGORIA_CTA_DESTINO,RESPONSABLE, Id_UEN, Fecha_Ingreso, Numero_Cliente) VALUES 
+		,CATEGORIA_CTA_DESTINO,SUBCATEGORIA_CTA_DESTINO,RESPONSABLE, Procesado, Id_UEN, Fecha_Ingreso, Numero_Cliente) VALUES 
 		(@Id_Transaccion, @Fecha, @Tipo_trx, @Categ_Trans, @Evento, @Estatus, @Canal, @Oficina_del_Transaccion, @Tipo_Cliente, @No_Contrato,
 		@No_Terminal, @COD_Comercio, @Nombre_Comercio, @No_Socio, @No_Sucursal_Socio, @No_Agencia,@COD_Cajero,@Numero_SIB,@COD_Operacion_SIB,
 		@No_Sesion,@No_Aprobacion_Tarjeta,@COD_TRX_Procesador,@COD_Procesador,@Nombre_Red,@No_CTA_Origen,@Tipo_CTA_Origen,
@@ -286,7 +286,7 @@ SELECT
 		@cliente_receptor,@Tipo_ID_receptor,@IDENTI_receptor,@Entidad_receptora,@Email,@Estatus_cuenta,@Referencia_Usuario,@Moneda_Origen,@Monto_Origen,
 		@Moneda_Destino,@Monto_Destino,@Subtotal,@Monto_Comision_Usuario,@Impuesto,@Monto_Impuesto,@Monto_Impuesto_2_,@Comision_En_Linea,@Detalle_trx,
 		@Referencia,@Envia_Notificacion,@Email_Beneficiario,@Usuario,@COD_Respuesta_Backend,@Descripcion_Backend,@No_Aprobacion_Trader,@Categoria_CTA_Origen,
-		@SubCategoria_CTA_Origen,@Categoria_CTA_Destino,@SubCategoria_CTA_Destino,@Responsable, @Id_UEN, @Fecha_Ingreso, @Numero_Cliente)
+		@SubCategoria_CTA_Origen,@Categoria_CTA_Destino,@SubCategoria_CTA_Destino,@Responsable, @Procesado, @Id_UEN, @Fecha_Ingreso, @Numero_Cliente)
 
 		FETCH NEXT FROM @miCursor INTO @ID, @sessionId, @userID, @channelName, @sessionData, @createdDate, @lastActivityDate, @mobileIMEI,
 		@userSessionID, @IP_CLIENTE, @operationDate, @userAgent, @host, @referer, @httpMethod, @httpStatusCode, @cookies, @httpParams,
